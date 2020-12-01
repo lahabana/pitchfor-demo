@@ -2,6 +2,8 @@ functions:
   - name: scrape-pitchfork
     runtime: nodejs14
     handler: src/fns/pitchfork.handler
+    env:
+      CUTOFF: "80"
     events:
       - schedule: @daily
       - connector: "pitch-it"
