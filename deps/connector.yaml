@@ -1,0 +1,3 @@
+connectors:
+  - name: "pitch-it"
+    type: webhook

@@ -1,0 +1,10 @@
+functions:
+  - name: scrape-pitchfork
+    runtime: nodejs14
+    handler: src/fns/pitchfork.handler
+    events:
+      - schedule: @daily
+      - connector: "pitch-it"
+    volumes:
+      - store: "pitchfork-scrape"
+        name: "out"
